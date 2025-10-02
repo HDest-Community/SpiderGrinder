@@ -1,0 +1,50 @@
+[default enu en enc eng eni ena enz]
+//										=
+// Title
+
+TITLE_SPIDERGRINDER						= "SpiderGrinder";
+
+// Monster Tags
+TAG_BALORLMG 							= "Laser MG Balor";
+TAG_BALOROB 							= "Balor Oddball";
+TAG_BALORRM 							= "Ruby Maser Balor";
+
+//Obituaries
+OB_BALORLMG 							= "%o was laser volleyed by a Balor.";
+OB_BALOROB 								= "%o was charge dumped repeatedly by a Balor.";
+OB_BALORRM								= "%o was melted by a Balor's gaze.";
+
+//Option Menu Titles
+SPIDERGRINDER_MENU						= "\c[Sapphire]Ⓢ\c- SpiderGrinder Options";
+
+//Menu Section Headers
+MENU_SPAWNOPTIONS						= "Spawn Options";
+MENU_MONSPAWNOPTIONS					= "Monster Spawn Options";
+MENU_PERSISTENCYOPTIONS					= "Spawn Persistence Options";
+MENU_RESETOPTIONS_TITLE					= "Menu Reset Options";
+MENU_RESETALLOPTIONS					= "Reset All Options";
+
+//Menu Static Text
+MENU_SPAWNRATE_TEXT1					= "Setting 'spawn rate' fully to the right will suppress";
+MENU_SPAWNRATE_TEXT2					= "spawns of that given type.";
+MENU_PERSISTENCY_TEXT					= "Control whether replacements happen after a mapload:";
+
+//Menu Option Labels
+MENU_NOTICE								= "Notice: ";
+MENU_SPAWNRATE							= "Spawn Rate: ";
+MENU_PERSISTENCY						= "Persistent Spawns: ";
+
+//Menu Command Text
+MENU_RESETMONSTER						= "Reset Monster Options";
+MENU_RESETPERSISTENCY					= "Reset Persistence Options";
+SPIDERGRINDER_RESETALLOPTIONS			= "Reset All SpiderGrinder Options";
+
+//Monster Spawnrate Description
+MENU_BALORLMG_SPAWNTEXT					= "\c[White]Controls the rate Balors have \c[Green]LMGs\c-";
+MENU_BALOROB_SPAWNTEXT					= "\c[White]Controls the rate Balors have \c[Purple]Oddballs\c-";
+MENU_BALORRM_SPAWNTEXT					= "\c[White]Controls the rate Balors have \c[Blue]Ruby Masers\c-";
+
+
+
+
+

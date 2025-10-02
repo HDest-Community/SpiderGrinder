@@ -1,0 +1,39 @@
+OptionMenu SpiderGrinderMenu {
+	Title "$TITLE_SPIDERGRINDER"
+	
+	StaticText "$MENU_NOTICE", "Yellow"
+	StaticText ""
+	StaticText "$MENU_SPAWNRATE_TEXT1", "White"
+	StaticText "$MENU_SPAWNRATE_TEXT2", "White"
+	StaticText ""
+	
+	StaticText "$MENU_MONSPAWNOPTIONS", "Lightblue"
+	StaticText "$MENU_BALORLMG_SPAWNTEXT"
+	Slider "$MENU_SPAWNRATE", "spidergrinder_balorLMG_spawn_bias", 0.0, 100, .01, 2
+	SafeCommand "$MENU_RESETMONSTER", "resetcvar spidergrinder_balorLMG_spawn_bias"
+	StaticText "$MENU_BALOROB_SPAWNTEXT"
+	Slider "$MENU_SPAWNRATE", "spidergrinder_balorOB_spawn_bias", 0.0, 100, .01, 2
+	SafeCommand "$MENU_RESETMONSTER", "resetcvar spidergrinder_balorOB_spawn_bias"
+	StaticText "$MENU_BALORRM_SPAWNTEXT"
+	Slider "$MENU_SPAWNRATE", "spidergrinder_balorRM_spawn_bias", 0.0, 100, .01, 2
+	SafeCommand "$MENU_RESETMONSTER", "resetcvar spidergrinder_balorRM_spawn_bias"
+	StaticText ""
+	
+	StaticText "$MENU_PERSISTENCYOPTIONS", "Yellow"
+	StaticText "$MENU_PERSISTENCY_TEXT", "White"
+	Option "$MENU_PERSISTENCY", "spidergrinder_persistent_spawning", "OnOff"
+	SafeCommand "$MENU_RESETPERSISTENCY", "resetcvar spidergrinder_persistent_spawning"
+	StaticText ""
+	StaticText ""
+
+	StaticText "$MENU_RESETOPTIONS", "Yellow"
+	SafeCommand "$SPIDERGRINDER_RESETALLOPTIONS", "SPIGRI_reset_cvars"
+}
+
+AddoptionMenu "OptionsMenu" {
+	Submenu "$SPIDERGRINDER_MENU", "SpiderGrinderMenu"
+}
+
+AddoptionMenu "HDAddonMenu" {
+	Submenu "$SPIDERGRINDER_MENU", "SpiderGrinderMenu"
+}

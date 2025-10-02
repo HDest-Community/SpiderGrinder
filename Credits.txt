@@ -1,0 +1,2 @@
+Niko (Sgt Major Kiwi) for the original spidergrinder code
+repackaged and touched up with language and menu lumps by Juppacoe

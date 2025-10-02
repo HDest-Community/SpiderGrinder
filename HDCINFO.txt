@@ -1,0 +1,4 @@
+//Spider Grinder Spawns
+addSpawnTableSingleEntry => { "tableName": "ArachnotronReplaces", "name": "BalorLMG", "weight": "#spidergrinder_balorLMG_spawn_bias", "persists": "#spidergrinder_persistent_spawning" }
+addSpawnTableSingleEntry => { "tableName": "ArachnotronReplaces", "name": "BalorOB", "weight": "#spidergrinder_balorOB_spawn_bias", "persists": "#spidergrinder_persistent_spawning" }
+addSpawnTableSingleEntry => { "tableName": "ArachnotronReplaces", "name": "BalorRM", "weight": "#spidergrinder_balorRM_spawn_bias", "persists": "#spidergrinder_persistent_spawning" }

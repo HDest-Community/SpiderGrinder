@@ -1,0 +1,2 @@
+alias spidergrinder_reset_cvars "resetcvar spidergrinder_balorLMG_spawn_bias; resetcvar spidergrinder_balorOB_spawn_bias; resetcvar spidergrinder_balorRM_spawn_bias; resetcvar spidergrinder_persistent_spawning;" 
+alias SPIGRI_reset_cvars "spidergrinder_reset_cvars"

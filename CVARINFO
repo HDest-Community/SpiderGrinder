@@ -1,0 +1,4 @@
+server float spidergrinder_balorLMG_spawn_bias		    = 0.4;
+server float spidergrinder_balorOB_spawn_bias			= 0.4;
+server float spidergrinder_balorRM_spawn_bias			= 0.2;
+server bool spidergrinder_persistent_spawning		    = false;
