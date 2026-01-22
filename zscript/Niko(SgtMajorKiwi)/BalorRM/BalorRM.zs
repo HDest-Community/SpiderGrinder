@@ -1,6 +1,6 @@
 //Balor ruby maser
-class BalorRM:Balor{
-	default{
+class BalorRM : Balor {
+	default {
 		health 300;
 		height 52;
 		radius 32;
@@ -23,26 +23,20 @@ class BalorRM:Balor{
 		+noblooddecals bloodtype "NotQuiteBloodSplat";
 		hdmobbase.shields 800;
 		meleethreshold -128;
-		translation "192:207=16:47", "16:47=192:207";
+		translation "BalorRM_Trans";
 	}
-	override void postbeginplay(){
-		if(bplayingid)blookallaround=false;
-		else gunheight=height*0.8;
-		super.postbeginplay();
-		battery=20;
-		alt=random(0,1);
-	}
+
 	override void deathdrop(){
 		if(!bhasdropped){
 			bhasdropped=true;
 			let mmm=HDMagAmmo.SpawnMag(self,"HDBattery",battery);
-			mmm.vel=vel+(frandom(-1,1),frandom(-1,1),1);
+			// Fixes a vm abort due to classes deleting the battery before
+			// we actually interface with it.
+			if (mmm) mmm.vel=vel+(frandom(-1,1),frandom(-1,1),1);
 			if(!random(0,35))A_DropItem("Putto");
 		}
 	}
-	int battery;
-	bool alt;
-	
+
 	static void MaserZap(
 		actor caller,
 		double zoffset=32,
@@ -263,12 +257,11 @@ class BalorRM:Balor{
 		---- AAAAAAAA 0 A_SpawnItemEx("HugeWallChunk",frandom(-4,4),frandom(-4,4),frandom(28,34),frandom(-6,6),frandom(-6,6),frandom(-2,16),0,160,0);
 		---- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_SpawnItemEx("BigWallChunk",frandom(-3,3),frandom(-3,3),frandom(28,34),frandom(-2,2),frandom(-2,2),frandom(2,14),0,160,0);
 		BSPI J 4 A_StartSound("baby/death",CHAN_BODY);
-		BSPI J 6 A_SpawnItemEx("MegaBloodSplatter",frandom(-10,10),frandom(-10,10),32,0,0,0,0,160,0);
-		BSPI J 10 A_SpawnItemEx("MegaBloodSplatter",frandom(-4,4),frandom(-4,4),32,0,0,0,0,160,0);
-		BSPI KLMN 7 A_SpawnItemEx("MegaBloodSplatter",0,0,28,0,0,0,0,160,0);
-		---- A 0 A_SpawnItemEx("MegaBloodSplatter",0,0,14,0,0,0,0,160,0);
-		BSPI O 7;
-		BSPI P -1 A_BossDeath();
+		BSPI J 6 A_GibSplatter();
+		BSPI J 10 A_GibSplatter();
+		BSPI KLMN 7 A_GibSplatter();
+		BSPI O 7 A_GibSplatter();
+		BSPI P -1;
 	xdeath:
 		stop;
 	raise:
